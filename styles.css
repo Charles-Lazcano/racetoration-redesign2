@@ -83,9 +83,12 @@ nav.links a:hover::after{right:0}
 .hbadge b{color:var(--volt)}
 .hero-visual{position:relative}
 .hero-car-frame{width:100%;max-width:360px;aspect-ratio:2/3;margin:0 auto;border-radius:10px;border:1px solid var(--line);
-  box-shadow:0 30px 70px rgba(0,0,0,.55);overflow:hidden;transform:rotate(2deg);transition:transform .5s var(--ease)}
+  box-shadow:0 30px 70px rgba(0,0,0,.55);overflow:hidden;background:#000;transform:rotate(2deg);transition:transform .5s var(--ease)}
 .hero-visual:hover .hero-car-frame{transform:rotate(0)}
-.hero-car-frame img{width:100%;height:100%;object-fit:cover}
+.hero-car-frame img{width:100%;height:100%;object-fit:contain}
+.hero-visual .sticker{position:absolute;left:-18px;bottom:26px;background:var(--volt);color:#0a0a0a;
+  font-family:'Anton';font-size:14px;letter-spacing:1px;padding:9px 15px;transform:rotate(-6deg);
+  box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:2}
 .scrolldown{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;color:var(--muted);
   font-size:11px;letter-spacing:.2em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
 .scrolldown i{width:1px;height:34px;background:linear-gradient(var(--volt),transparent);animation:drop 1.8s infinite}
@@ -108,7 +111,7 @@ nav.links a:hover::after{right:0}
 .car{scroll-snap-align:center;flex:0 0 auto;position:relative;cursor:pointer;border-radius:8px;overflow:hidden;
   background:#000;border:1px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;
   width:min(62vw,280px);aspect-ratio:2/3}
-.car img{width:100%;height:100%;object-fit:cover;display:block}
+.car img{width:100%;height:100%;object-fit:contain;display:block}
 .car:hover,.car:focus-visible{transform:translateY(-8px);border-color:var(--volt);box-shadow:0 26px 60px rgba(0,0,0,.55),0 0 0 2px var(--volt);outline:none}
 .car .go{position:absolute;left:50%;bottom:18px;transform:translateX(-50%) translateY(10px);opacity:0;
   background:var(--volt);color:#0a0a0a;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
