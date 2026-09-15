@@ -1,0 +1,4 @@
+.wrangler/
+.agents/
+.claude/
+skills-lock.json
