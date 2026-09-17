@@ -110,6 +110,7 @@ nav.links a:hover::after{right:0}
   scrollbar-width:none}
 .rail::-webkit-scrollbar{display:none}
 .rail .wrap-pad{flex:0 0 max(0px,calc((100vw - var(--maxw))/2))}
+@media(min-width:940px){.rail{justify-content:center}}
 .car{scroll-snap-align:center;flex:0 0 auto;position:relative;cursor:pointer;border-radius:8px;overflow:hidden;
   background:#000;border:1px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;
   width:min(46vw,210px);aspect-ratio:1024/2380}
