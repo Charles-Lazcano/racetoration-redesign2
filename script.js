@@ -10,14 +10,6 @@ if (isIOS) {
   });
 }
 
-// Vroom-vroom haptic buzz, mobile only
-const isMobile = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
-const vroomVibrate = () => {
-  if (!("vibrate" in navigator) || !isMobile) return;
-  navigator.vibrate([40, 30, 40, 30, 120]); // vroom, vroom, buzz
-};
-vroomVibrate();
-
 // Sticky header background once scrolled
 const hd = document.getElementById("hd");
 addEventListener("scroll", () => hd.classList.toggle("scrolled", scrollY > 10), { passive: true });
@@ -132,6 +124,12 @@ const successEl = document.getElementById("form-success");
 const errorEl = document.getElementById("form-error");
 const errorMessageEl = document.getElementById("form-error-message");
 const DEFAULT_ERROR_MESSAGE = errorMessageEl.textContent;
+
+const vroomVibrate = () => {
+  if (!("vibrate" in navigator)) return;
+  if (!window.matchMedia("(hover: none) and (pointer: coarse)").matches) return;
+  navigator.vibrate([40, 30, 40, 30, 120]); // vroom, vroom, buzz
+};
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
