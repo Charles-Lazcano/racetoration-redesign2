@@ -28,6 +28,21 @@ mob.querySelectorAll("a").forEach((a) =>
   })
 );
 
+// Phone FAB — call/text popover
+const phoneFabBtn = document.getElementById("phoneFabBtn");
+const phoneFabMenu = document.getElementById("phoneFabMenu");
+phoneFabBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const open = phoneFabMenu.classList.toggle("open");
+  phoneFabBtn.setAttribute("aria-expanded", String(open));
+});
+document.addEventListener("click", (e) => {
+  if (!phoneFabMenu.classList.contains("open")) return;
+  if (e.target === phoneFabBtn || phoneFabMenu.contains(e.target)) return;
+  phoneFabMenu.classList.remove("open");
+  phoneFabBtn.setAttribute("aria-expanded", "false");
+});
+
 // Reveal-on-scroll
 const io = new IntersectionObserver(
   (entries) => {
