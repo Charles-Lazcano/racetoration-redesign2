@@ -254,6 +254,8 @@ footer .fl a:hover{color:var(--volt)}
   .svc-mini{grid-template-columns:1fr}
   .ba-grid{grid-template-columns:1fr}
   .visit-grid,.shop-grid{grid-template-columns:1fr}
+  .rail{justify-content:flex-start}
+  .car{scroll-snap-align:start}
 }
 @media(max-width:480px){
   .frow{grid-template-columns:1fr}
