@@ -55,12 +55,14 @@ nav.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;he
 nav.links a:hover{color:var(--volt)}
 nav.links a:hover::after{right:0}
 .header-cta{display:flex;gap:10px}
-.hamb{display:none;background:none;border:0;color:var(--paper);cursor:pointer;width:40px;height:40px;font-size:24px}
+.hamb{display:none;background:none;border:0;color:var(--paper);cursor:pointer;width:44px;height:44px;font-size:24px}
 #mobnav{position:fixed;inset:72px 0 auto 0;background:rgba(11,11,12,.98);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);flex-direction:column;padding:12px 24px 22px;display:none;z-index:59}
 #mobnav.open{display:flex}
 #mobnav a{padding:13px 0;font-weight:600;border-bottom:1px solid var(--line)}
 #mobnav .btn{margin-top:16px}
+.mobnav-cta{display:flex;gap:10px;margin-top:16px}
+.mobnav-cta .btn{margin-top:0;flex:1}
 
 /* ---------- HERO ---------- */
 .hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 70px;position:relative;overflow:hidden;
@@ -207,7 +209,7 @@ form{background:var(--surface);border:1px solid var(--line);border-radius:12px;p
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .field{margin-bottom:15px}
 label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#b9b9b4;margin-bottom:7px}
-input,textarea{width:100%;background:#0a0a0b;border:1px solid var(--line);color:var(--paper);padding:13px 14px;font-family:inherit;font-size:15px;border-radius:4px;transition:border-color .15s,box-shadow .15s}
+input,textarea{width:100%;background:#0a0a0b;border:1px solid var(--line);color:var(--paper);padding:13px 14px;font-family:inherit;font-size:16px;border-radius:4px;transition:border-color .15s,box-shadow .15s}
 input:focus,textarea:focus{outline:none;border-color:var(--volt);box-shadow:0 0 0 3px rgba(198,244,0,.18)}
 textarea{resize:vertical;min-height:104px}
 form .btn{width:100%;margin-top:6px;padding:16px;font-size:15px}
