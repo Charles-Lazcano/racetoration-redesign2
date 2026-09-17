@@ -74,7 +74,11 @@ nav.links a:hover::after{right:0}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;position:relative;z-index:2}
 .hero .num{font-family:'Permanent Marker',cursive;font-size:clamp(26px,4vw,40px);color:#f2f2ee;letter-spacing:2px}
 .hero .logo{font-family:'Lobster',cursive;font-size:clamp(62px,11vw,132px);color:var(--script);line-height:.9;
-  text-shadow:0 3px 0 rgba(0,0,0,.35);margin:-4px 0 6px}
+  margin:-4px 0 6px;animation:neon-glow 4s ease-in-out infinite}
+@keyframes neon-glow{
+  0%,100%{text-shadow:0 3px 0 rgba(0,0,0,.35),0 0 10px rgba(252,226,0,.55),0 0 22px rgba(252,226,0,.35),0 0 42px rgba(252,226,0,.2)}
+  50%{text-shadow:0 3px 0 rgba(0,0,0,.35),0 0 18px rgba(252,226,0,.95),0 0 38px rgba(252,226,0,.75),0 0 70px rgba(252,226,0,.5)}
+}
 .hero .tagline{display:flex;flex-wrap:wrap;gap:6px 16px;font-style:italic;font-weight:800;
   font-size:clamp(15px,2.4vw,24px);letter-spacing:.16em}
 .hero .tagline b{color:var(--magenta)}
