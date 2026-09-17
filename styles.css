@@ -262,6 +262,8 @@ footer .fl a:hover{color:var(--volt)}
   .visit-grid,.shop-grid{grid-template-columns:1fr}
   .rail{justify-content:flex-start}
   .car{scroll-snap-align:start}
+  #late-model-performance .svc-visual{min-height:360px}
+  .vpg-photo{width:72%;max-height:82%}
 }
 @media(max-width:480px){
   .frow{grid-template-columns:1fr}
