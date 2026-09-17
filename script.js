@@ -125,8 +125,15 @@ const errorEl = document.getElementById("form-error");
 const errorMessageEl = document.getElementById("form-error-message");
 const DEFAULT_ERROR_MESSAGE = errorMessageEl.textContent;
 
+const vroomVibrate = () => {
+  if (!("vibrate" in navigator)) return;
+  if (!window.matchMedia("(hover: none) and (pointer: coarse)").matches) return;
+  navigator.vibrate([40, 30, 40, 30, 120]); // vroom, vroom, buzz
+};
+
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
+  vroomVibrate();
   errorEl.hidden = true;
 
   submitBtn.disabled = true;
